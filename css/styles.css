@@ -1,7 +1,7 @@
 /* =====================================================================
    Portfolio — styles.css
    Structure:  variables → base → utilities → nav → hero → sections
-               → about → skills → projects → timeline → contact
+               → about → skills → projects → journey → contact
                → footer → back-to-top → responsive → reduced-motion
    Theming:    all colors are CSS variables. Edit :root (light) and
                [data-theme="dark"] to re-skin the whole site.
@@ -284,18 +284,83 @@ section { scroll-margin-top: calc(var(--nav-h) + 12px); }
 .card__links a { color: var(--accent); font-weight: 600; font-size: .9rem; transition: gap .2s ease, opacity .2s ease; }
 .card__links a:hover { opacity: .75; }
 
-/* ===================== TIMELINE ===================== */
-.timeline { position: relative; max-width: 720px; margin: 0 auto; padding-left: 34px; border-left: 2px solid var(--border); }
-.timeline__item { position: relative; padding-bottom: 42px; }
-.timeline__item:last-child { padding-bottom: 0; }
-.timeline__dot {
-  position: absolute; left: -43px; top: 4px; width: 16px; height: 16px; border-radius: 50%;
-  background: var(--accent); box-shadow: 0 0 0 5px var(--accent-soft);
+/* ===================== JOURNEY TIMELINE ===================== */
+.journey {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
-.timeline__date { color: var(--accent); font-weight: 600; font-size: .85rem; }
-.timeline__content h3 { font-size: 1.15rem; margin: 4px 0 2px; }
-.timeline__org { color: var(--text-muted); font-weight: 500; margin: 0 0 6px; }
-.timeline__content p:last-child { color: var(--text-muted); margin: 0; }
+.journey__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+.journey__item:last-child { padding-bottom: 0; }
+
+/* connecting line: faint track + accent overlay that draws in on scroll */
+.journey__item:not(:last-child)::before,
+.journey__item:not(:last-child)::after {
+  content: ""; position: absolute; left: 23px; top: 26px; bottom: -4px; width: 2px;
+}
+.journey__item:not(:last-child)::before { background: var(--border); }
+.journey__item:not(:last-child)::after {
+  background: linear-gradient(var(--accent), var(--accent-2));
+  transform: scaleY(0); transform-origin: top;
+  transition: transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+.journey.is-visible .journey__item:not(:last-child)::after { transform: scaleY(1); }
+.journey.is-visible .journey__item:nth-child(2)::after { transition-delay: .18s; }
+.journey.is-visible .journey__item:nth-child(3)::after { transition-delay: .36s; }
+
+.journey__node {
+  position: relative; z-index: 1;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 0 6px var(--bg-alt), var(--shadow-sm);
+  transition: transform .3s cubic-bezier(.22, 1, .36, 1);
+}
+.journey__node--goal {
+  background: var(--bg-alt); color: var(--accent);
+  border: 2px dashed var(--accent);
+  box-shadow: 0 0 0 6px var(--bg-alt);
+}
+.journey__item:hover .journey__node { transform: scale(1.08); }
+
+.journey__card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 20px 22px; box-shadow: var(--shadow-sm);
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+.journey__item:hover .journey__card {
+  transform: translateY(-4px); border-color: var(--accent); box-shadow: var(--shadow);
+}
+
+.journey__date {
+  display: inline-block; margin-bottom: 10px;
+  background: var(--accent-soft); color: var(--accent);
+  font-weight: 600; font-size: .78rem; letter-spacing: .02em;
+  padding: 4px 12px; border-radius: 999px;
+}
+.journey__date--goal { background: transparent; border: 1px dashed var(--accent); }
+.journey__title { font-size: 1.12rem; margin: 0 0 4px; line-height: 1.3; }
+.journey__org { color: var(--text-muted); font-weight: 500; font-size: .9rem; margin: 0 0 8px; }
+.journey__desc { color: var(--text-muted); font-size: .95rem; margin: 0; }
+.journey__card .tags { margin-top: 14px; }
+
+@media (max-width: 480px) {
+  .journey__item { grid-template-columns: 40px 1fr; gap: 14px; }
+  .journey__item:not(:last-child)::before,
+  .journey__item:not(:last-child)::after { left: 19px; }
+  .journey__node { width: 40px; height: 40px; }
+  .journey__node svg { width: 18px; height: 18px; }
+  .journey__card { padding: 16px 18px; }
+}
 
 /* ===================== CONTACT ===================== */
 .contact { text-align: center; max-width: 640px; }

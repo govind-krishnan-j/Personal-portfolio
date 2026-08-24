@@ -90,6 +90,24 @@
     revealEls.forEach(function (el) { revealObserver.observe(el); });
   }
 
+  /* ---------- Journey timeline: draw the connecting line on scroll ---------- */
+  var journey = document.querySelector(".journey");
+  if (journey) {
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      journey.classList.add("is-visible");
+    } else {
+      var journeyObserver = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.25 });
+      journeyObserver.observe(journey);
+    }
+  }
+
   /* ---------- Active nav-link highlighting ---------- */
   var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav__link"));
   var sections = document.querySelectorAll("main section[id]");
