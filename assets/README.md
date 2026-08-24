@@ -1,10 +1,14 @@
 # assets/
 
-Put your downloadable / image files here:
+Downloadable and image files used by the portfolio:
 
-- `resume.pdf`  → the nav "Resume" button already links to `assets/resume.pdf`
-- `photo.jpg` (or .png) → your profile photo. After adding it, replace
-  `<div class="avatar">GK</div>` in index.html's About section with:
-  `<img src="assets/photo.jpg" alt="Your Name">`
+- `resume.pdf` — linked from the nav **Resume** button. Replace this file with
+  your own to update the download (keep the name, or update the link in
+  `index.html`).
+- `IMG_20260108_103821444.jpg` — the profile photo shown in the **About**
+  section (`<img class="avatar" …>` in `index.html`). To change it, drop in a
+  new image and update that `src`.
 
-You can delete this file once you've added your own.
+The social-share preview image (`og:image` / `twitter:image` in `index.html`)
+also points at the profile photo. For the sharpest link previews, add a
+dedicated 1200×630 image and point those meta tags at it.

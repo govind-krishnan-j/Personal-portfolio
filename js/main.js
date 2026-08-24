@@ -17,6 +17,23 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- Theme toggle (light / dark) ----------
+     The initial theme is set by a tiny inline script in <head> (so there's no
+     flash on load). Here we just handle the button click + save the choice. */
+  var themeToggle = document.getElementById("theme-toggle");
+  function themeLabel(theme) {
+    return theme === "dark" ? "Switch to light theme" : "Switch to dark theme";
+  }
+  if (themeToggle) {
+    themeToggle.setAttribute("aria-label", themeLabel(document.documentElement.getAttribute("data-theme")));
+    themeToggle.addEventListener("click", function () {
+      var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      themeToggle.setAttribute("aria-label", themeLabel(next));
+    });
+  }
+
   /* ---------- Scroll: progress bar + sticky nav + back-to-top ---------- */
   var progress = document.getElementById("scroll-progress");
   var nav = document.getElementById("nav");

@@ -4,9 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- TODO: update the title and description with your name + target role -->
   <title>Govind Krishnan J — Python Developer</title>
   <meta name="description" content="Portfolio of Govind Krishnan J, a Python developer building full-stack and AI-powered applications." />
+
+  <!-- Canonical + social preview (Open Graph / Twitter).
+       Change the base URL below if you deploy somewhere other than GitHub Pages
+       (custom domain, Netlify, Vercel…). For the sharpest card, swap og:image
+       for a dedicated 1200×630 image. -->
+  <link rel="canonical" href="https://govind-krishnan-j.github.io/Personal-portfolio/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Govind Krishnan J" />
+  <meta property="og:title" content="Govind Krishnan J — Python Developer" />
+  <meta property="og:description" content="Portfolio of Govind Krishnan J, a Python developer building full-stack and AI-powered applications." />
+  <meta property="og:url" content="https://govind-krishnan-j.github.io/Personal-portfolio/" />
+  <meta property="og:image" content="https://govind-krishnan-j.github.io/Personal-portfolio/assets/IMG_20260108_103821444.jpg" />
+  <meta property="og:image:alt" content="Govind Krishnan J" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Govind Krishnan J — Python Developer" />
+  <meta name="twitter:description" content="Portfolio of Govind Krishnan J, a Python developer building full-stack and AI-powered applications." />
+  <meta name="twitter:image" content="https://govind-krishnan-j.github.io/Personal-portfolio/assets/IMG_20260108_103821444.jpg" />
 
   <!-- Simple inline SVG favicon (monogram). Replace the letters if you like. -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='68' font-family='Arial' font-size='54' font-weight='700' fill='white' text-anchor='middle'>G</text></svg>" />
@@ -15,6 +33,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Set the theme before first paint (no flash). Uses the saved choice, else the OS preference. -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var dark = saved ? saved === "dark"
+          : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+      } catch (e) {}
+    })();
+  </script>
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -43,6 +73,10 @@
       </nav>
 
       <div class="nav__actions">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark theme" title="Toggle theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
         <button id="nav-burger" class="icon-btn nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
           <span></span><span></span><span></span>
         </button>
@@ -82,7 +116,7 @@
           <a href="https://www.linkedin.com/in/govind-krishnan-j-3264b6296" class="icon-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33 0-3.04-1.85-3.04s-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.73v20.54C0 23.23.8 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
           </a>
-          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=govindkrishnan44@gmail.com&amp;su=Hello%20from%20your%20portfolio" class="icon-btn" target="_blank" rel="noopener" aria-label="Email">
+          <a href="mailto:govindkrishnan44@gmail.com?subject=Hello%20from%20your%20portfolio" class="icon-btn" target="_blank" rel="noopener" aria-label="Email">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
           </a>
         </div>
@@ -179,8 +213,7 @@
                 <li>Python</li><li>Groq / LLaMA</li><li>Streamlit</li><li>BeautifulSoup</li><li>fpdf2</li>
               </ul>
               <div class="card__links">
-                <!-- TODO: point Code at the exact repo URL -->
-                <a href="https://github.com/govind-krishnan-j" target="_blank" rel="noopener">
+                <a href="https://github.com/govind-krishnan-j/ai-research-agent" target="_blank" rel="noopener">
                   Code <span aria-hidden="true">↗</span>
                 </a>
                 <a href="https://ai-research-agent-6ua9dxxbwldju4mm8hhobg.streamlit.app/" target="_blank" rel="noopener">
@@ -204,8 +237,7 @@
                 <li>Python</li><li>Flask</li><li>SQLAlchemy</li><li>scikit-learn</li><li>APScheduler</li><li>Chart.js</li>
               </ul>
               <div class="card__links">
-                <!-- TODO: point Code at the exact repo URL -->
-                <a href="https://github.com/govind-krishnan-j" target="_blank" rel="noopener">
+                <a href="https://github.com/govind-krishnan-j/amazon-price-tracker" target="_blank" rel="noopener">
                   Code <span aria-hidden="true">↗</span>
                 </a>
                 <a href="https://govind707.pythonanywhere.com/" target="_blank" rel="noopener">
@@ -249,12 +281,12 @@
           my inbox is always open — I'll get back to you as soon as I can.
         </p>
         <!-- Contact button uses a mailto link. See README to turn it into a Formspree form. -->
-        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=govindkrishnan44@gmail.com&amp;su=Hello%20from%20your%20portfolio" class="btn btn--primary btn--lg reveal" target="_blank" rel="noopener">Say Hello</a>
+        <a href="mailto:govindkrishnan44@gmail.com?subject=Hello%20from%20your%20portfolio" class="btn btn--primary btn--lg reveal" target="_blank" rel="noopener">Say Hello</a>
 
         <div class="contact__socials reveal">
           <a href="https://github.com/govind-krishnan-j" target="_blank" rel="noopener">GitHub</a>
           <a href="https://www.linkedin.com/in/govind-krishnan-j-3264b6296" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=govindkrishnan44@gmail.com&amp;su=Hello%20from%20your%20portfolio" target="_blank" rel="noopener">Email</a>
+          <a href="mailto:govindkrishnan44@gmail.com?subject=Hello%20from%20your%20portfolio" target="_blank" rel="noopener">Email</a>
         </div>
       </div>
     </section>
