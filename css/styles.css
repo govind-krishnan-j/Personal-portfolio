@@ -259,6 +259,12 @@ section { scroll-margin-top: calc(var(--nav-h) + 12px); }
 .skills__group {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 26px; box-shadow: var(--shadow-sm);
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+.skills__group:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
 }
 .skills__heading { font-size: 1.1rem; margin-bottom: 16px; }
 
