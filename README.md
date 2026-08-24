@@ -1,71 +1,66 @@
-# Portfolio Website
+# Govind Krishnan J — Portfolio
 
-A fast, responsive, single-page portfolio built with **plain HTML, CSS, and JavaScript** — no
-build step, no frameworks, no dependencies to install. Just open the file and it runs.
+Personal portfolio website showcasing my projects, technical skills,
+education, and experience as a Python developer and aspiring software engineer.
+
+## About
+
+I'm a B.Tech Electronics & Communication Engineering student graduating
+in 2027, with a strong interest in software development, backend engineering,
+and AI-powered applications.
+
+## Tech Stack
+
+- HTML
+- CSS
+- JavaScript
+- Responsive Web Design
+- Intersection Observer API
+
+## Featured Projects
+
+### AI Research Agent
+An AI-powered research agent that searches the web, analyzes sources,
+and generates structured research reports.
+
+**Technologies:** Python, Groq/LLaMA, Streamlit, BeautifulSoup
+
+### Amazon Price Tracker
+A full-stack web application that tracks Amazon India prices,
+visualizes price history, predicts price trends, and sends automated
+price-drop notifications.
+
+**Technologies:** Python, Flask, SQLAlchemy, SQLite, scikit-learn,
+APScheduler, Chart.js
 
 ## Features
-- Scroll-triggered reveal animations (vanilla `IntersectionObserver`)
-- Scroll-progress bar + sticky nav that highlights the current section
-- Light / dark theme toggle (remembers your choice)
-- Rotating hero role text
-- Fully responsive (mobile menu included)
-- Accessible: semantic HTML, keyboard focus styles, and it honours "reduce motion"
 
-## File structure
-```
-portfolio/
-├── index.html        ← all the content (edit this first)
-├── css/
-│   └── styles.css     ← all styling + theme colors
-├── js/
-│   └── main.js        ← animations, theme toggle, nav behavior
-├── assets/            ← put resume.pdf and your photo here
-└── README.md
-```
+- Responsive single-page design
+- Light/dark theme
+- Scroll animations
+- Responsive mobile navigation
+- Accessible semantic HTML
+- Project showcase
+- Resume and social links
 
-## How to view it
-Just **double-click `index.html`** — it opens in your browser. No server needed.
+## Running Locally
 
-> Tip: for live-reload while editing, use VS Code's "Live Server" extension, or run a tiny
-> local server with Python: `python -m http.server` then visit `http://localhost:8000`.
+No build step or dependencies are required.
 
-## How to make it yours
-Everything you need to change is marked with `<!-- TODO -->` comments in `index.html`. Search for
-`TODO` and work through them:
+Clone the repository:
 
-1. **Name, role & tagline** — top of `index.html` (title, nav logo, hero).
-2. **Bio** — the About section.
-3. **Rotating roles** — edit the `roles` list near the bottom of `js/main.js`.
-4. **Skills** — add/remove `<li>` items in the Skills section.
-5. **Projects** — update the two real cards; copy the template card (`<article class="card ...">`)
-   to add more. Point the "Code" / "Live Demo" links at your real URLs.
-6. **Experience** — fill in the timeline entries, or delete the whole `#experience` section.
-7. **Contact + socials** — replace `your.email@example.com` and the `#` LinkedIn links everywhere.
-8. **Resume** — drop `resume.pdf` into `assets/` (the Resume button already links to it).
-9. **Photo** — put an image in `assets/` and replace the `<div class="avatar">GK</div>` in About with
-   `<img src="assets/photo.jpg" alt="Your Name">`.
+git clone <your-repository-url>
 
-### Change the colors
-Open `css/styles.css` and edit the variables at the top — `:root` controls the **light** theme and
-`[data-theme="dark"]` the **dark** theme. Change `--accent` to re-brand the whole site in one edit.
+Open `index.html` in a browser.
 
-## Deploy it (free)
+For live reload during development, you can use VS Code Live Server.
 
-**GitHub Pages**
-1. Create a new GitHub repo and push these files to it.
-2. Repo → **Settings → Pages** → Source: `main` branch, `/root` → **Save**.
-3. Your site goes live at `https://<username>.github.io/<repo>/` within a minute.
+## Deployment
 
-**Netlify / Vercel** — even simpler: drag-and-drop this folder onto the Netlify dashboard, or import
-the repo in Vercel. Both give a free URL and support custom domains.
+This portfolio can be deployed using GitHub Pages, Netlify, or Vercel.
 
-## Optional: a real contact form
-The contact button uses a `mailto:` link. To collect messages without a backend, sign up at
-[formspree.io](https://formspree.io) and replace the button with a form:
-```html
-<form action="https://formspree.io/f/YOUR_ID" method="POST">
-  <input type="email" name="email" placeholder="Your email" required>
-  <textarea name="message" placeholder="Your message" required></textarea>
-  <button type="submit" class="btn btn--primary">Send</button>
-</form>
-```
+## Contact
+
+- GitHub: <your-github-url>
+- LinkedIn: <your-linkedin-url>
+- Email: <your-email>
