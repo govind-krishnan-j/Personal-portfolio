@@ -61,6 +61,6 @@ This portfolio can be deployed using GitHub Pages, Netlify, or Vercel.
 
 ## Contact
 
-- GitHub: <your-github-url>
-- LinkedIn: <your-linkedin-url>
-- Email: <your-email>
+- GitHub: https://github.com/govind-krishnan-j
+- LinkedIn: www.linkedin.com/in/govind-krishnan-j-3264b6296
+- Email: govindkrishnan44@gmail.com
