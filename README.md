@@ -49,7 +49,7 @@ No build step or dependencies are required.
 
 Clone the repository:
 
-git clone <your-repository-url>
+git clone https://github.com/govind-krishnan-j/Personal-portfolio.git
 
 Open `index.html` in a browser.
 
