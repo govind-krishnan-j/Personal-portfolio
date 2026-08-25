@@ -162,7 +162,7 @@ section { scroll-margin-top: calc(var(--nav-h) + 12px); }
   box-shadow: var(--shadow-sm);
 }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
-.nav__logo { font-family: var(--font-head); font-weight: 700; font-size: 1.35rem; }
+.nav__logo { font-family: var(--font-head); font-weight: 700; font-size: 1.35rem; margin-right: auto; }
 
 .nav__menu { display: flex; align-items: center; gap: 28px; }
 .nav__link { position: relative; font-weight: 500; color: var(--text-muted); transition: color .2s ease; }
@@ -174,7 +174,7 @@ section { scroll-margin-top: calc(var(--nav-h) + 12px); }
 .nav__link.active { color: var(--accent); }
 .nav__link.active::after { width: 100%; }
 
-.nav__actions { display: flex; align-items: center; gap: 12px; }
+.nav__actions { display: flex; align-items: center; gap: 12px; margin-left: 22px; }
 
 /* hamburger */
 .nav__burger { display: none; flex-direction: column; gap: 5px; }
