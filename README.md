@@ -1,66 +1,64 @@
 # Govind Krishnan J — Portfolio
 
-Personal portfolio website showcasing my projects, technical skills,
-education, and experience as a Python developer and aspiring software engineer.
+My personal portfolio website showcasing my projects, technical skills, education, and experience as an aspiring software developer.
+
+🌐 **Live Website:** https://govind-krishnan-j.github.io/Personal-portfolio/
 
 ## About
 
-I'm a B.Tech Electronics & Communication Engineering student graduating
-in 2027, with a strong interest in software development, backend engineering,
-and AI-powered applications.
+I'm a B.Tech Electronics & Communication Engineering student with a strong interest in software development, backend engineering, and AI-powered applications.
+
+This portfolio highlights the projects I've built while developing my skills in Python, web development, databases, APIs, and AI technologies.
 
 ## Tech Stack
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
-- Responsive Web Design
 - Intersection Observer API
+- Responsive Web Design
 
 ## Featured Projects
 
 ### AI Research Agent
-An AI-powered research agent that searches the web, analyzes sources,
-and generates structured research reports.
 
-**Technologies:** Python, Groq/LLaMA, Streamlit, BeautifulSoup
+An AI-powered research agent that searches the web, analyzes multiple sources, and generates structured research reports with key findings, summaries, and conclusions.
+
+**Technologies:** Python, Groq, LLaMA, Streamlit, BeautifulSoup
 
 ### Amazon Price Tracker
-A full-stack web application that tracks Amazon India prices,
-visualizes price history, predicts price trends, and sends automated
-price-drop notifications.
 
-**Technologies:** Python, Flask, SQLAlchemy, SQLite, scikit-learn,
-APScheduler, Chart.js
+A full-stack web application that tracks Amazon India product prices, visualizes price history, predicts price trends, and sends automated notifications when products reach target prices.
 
-## Features
+**Technologies:** Python, Flask, SQLAlchemy, SQLite, scikit-learn, APScheduler, Chart.js
+
+## Portfolio Features
 
 - Responsive single-page design
-- Light/dark theme
-- Scroll animations
+- Light and dark theme
+- Scroll-triggered animations
+- Scroll progress indicator
+- Sticky navigation
+- Active section highlighting
 - Responsive mobile navigation
+- Rotating hero role text
 - Accessible semantic HTML
+- Keyboard focus support
+- Reduced-motion support
 - Project showcase
 - Resume and social links
 
-## Running Locally
+## Project Structure
 
-No build step or dependencies are required.
-
-Clone the repository:
-
-git clone https://github.com/govind-krishnan-j/Personal-portfolio.git
-
-Open `index.html` in a browser.
-
-For live reload during development, you can use VS Code Live Server.
-
-## Deployment
-
-This portfolio can be deployed using GitHub Pages, Netlify, or Vercel.
-
-## Contact
-
-- GitHub: https://github.com/govind-krishnan-j
-- LinkedIn: www.linkedin.com/in/govind-krishnan-j-3264b6296
-- Email: govindkrishnan44@gmail.com
+```text
+Personal-portfolio/
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── main.js
+├── assets/
+│   ├── resume.pdf
+│   └── ...
+├── .gitignore
+└── README.md
